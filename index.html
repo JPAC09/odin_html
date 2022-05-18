@@ -3,16 +3,17 @@
 <html> <!-- these are called elements-->
     <head>
         <meta charset="euc-jp">
+        <link rel="stylesheet" href="styles.css">
         <title>first web</title>
     </head>
 
     <body>
-        <h1>heading 1</h1>
-        <h2>heading 2</h2>
+        <h1 class="class_name">heading 1</h1>
+        <h2 id="title">heading 2</h2>
         <p>this is <strong>bold</strong>, this is <em>italic</em></p>
 
 
-        <ol> <!--orderlist-->
+        <ol class="class1" class="class2"> <!--orderlist-->
             <li>list item 1</li>
             <li>list item 2</li>
             <li>list item 3</li>
@@ -24,7 +25,7 @@
             <li>list item %</li>
         </ul>
 
-        <a href="https://www.theodinproject.com/about">
+        <a class="class1" id="id1" href="https://www.theodinproject.com/about">
             this is an absolute link
         </a>
         <!--Links are one of the key features of HTML. They allow us to link to other HTML pages on the web.
@@ -37,7 +38,19 @@
 
         <img src="https://www.theodinproject.com/mstile-310x310.png" alt="alternative text if page doesnt load">
         <!-- images have no closing tag-->
+
+        <div>
+            <!--divs are generic box element that can contain anything-->
+            <!--Divs allow us to divide the page into different blocks and apply styling to those blocks-->
+        </div>
+
+        <span>
+            <!--similar to div, spans are generic inline elements that can contain anything-->
+        </span>
     </body>
 </html>
 
 <!-- this is comment-->
+
+<!--paragraphs and divs are BLOCK elements by default(begin new line), links are INLINE elements by default (they do not begin in new line)-->
+<!--above can be changed by chaning property display:block;-->

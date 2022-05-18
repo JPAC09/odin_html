@@ -1,0 +1,176 @@
+/* comments */
+
+/*selector {
+    propert: value
+} */
+
+/* universal selector */
+* {
+    color:purple;
+}
+
+/* type selector */ /*type of html element*/
+ul {
+    color: blue;
+}
+
+/*class selector*/
+
+.class_name {
+    color: red;
+}
+
+/*id selector*/
+
+#title {
+    background-color:blue;
+}
+
+/*grouping selector*/
+
+.read,
+.unread {
+    color:white;
+    background-color:black;
+}
+
+.read {
+    /*unique declarations*/
+}
+
+.unread {
+    /*unique declarations*/
+}
+
+/*chaining selectors*/
+.class1.class2 {
+    color: purple;
+} /*this chaining selector selects any html elements with both class1 and class2*/
+
+.class1#id1 {
+    color: purple;
+} /*this chaining selector selects any html elements with both class1 and id1*/
+
+
+/*descendant combinator*/ /*1 out of 4 combinators in CSS*/
+
+.classA .classB {
+    color: red;
+} /*styles html elements which are classB but also inside an ancestor html element which is classA*/
+
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+  /* flex: 1; */
+}
+
+
+
+/*color property is TEXT color, can accept HEX,RGB,HSL values and also name such as red,transparent*/
+.prop {
+    font-family:'Calibri','Times New Roman'; /*if first is not availabe, it will use the next one*/
+    font-size:12px;
+    font-weight:bold; /*bold is equivalent to font-weight:700*/
+    text-align:center;
+
+}
+
+img {
+    height:auto;
+    width: 100px; /*this setting combination of height and width will properly scale it*/
+}
+
+/*cascade and specificity of cascading style sheets*/
+
+/*ID > Class > Type ,if the same, then the more "specific" style will be used, example:*/
+
+/* rule 1 */
+#subsection {
+    color: blue;
+}
+/* rule 2 */
+.main .list {
+    color: red;
+} /*RULE 1 WINS SINCE ID BEATS CLASS*/
+
+
+/* rule 1 */
+.subsection {
+    color: blue;
+}
+/* rule 2 */
+.main .list {
+    color: red;
+} /*RULE 2 WINS SINCE BOTH ARE CLASSES BUT RULE 2 IS MORE SPECIFIC*/
+
+/* rule 1 */
+.class.second-class {
+    font-size: 12px;
+  }
+  
+/* rule 2 */
+.class .second-class {
+    font-size: 24px;
+} /*TIE SINCE COMBINATORS DO NOT ADD SPECIFICITY*/
+
+/* rule 1 */
+* {
+    color: black;
+}
+  
+/* rule 2 */
+h1 {
+    color: orange;
+} /*RULE 2 WINS*/
+
+
+/*Inheritance: */
+/*html child elements inherits the CSS properties of html parent elements, unless the element properties are directly specified*/
+
+
+/*Rule order:*/
+/*if there are still tie-breakers in the cascade, the last defined rule will apply*/
+
+
+
+
+/*FLEXBOX*/
+.flex-container {
+    display: flex;
+} /*this is a flex container, flex container = any element with display:flex*/
+  
+/* this selector selects all divs inside of .flex-container */
+.flex-container div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1;
+} /*this is a flex item, flex item = any element that lives inside of a flex container*/
+/*you can put display:flex on a flex item element to make it a nested flex container*/
+
+/*flex property:
+flex is a SHORTHAND property for flex-grow, flex-shrink and flex-basis
+
+default is flex: 0 1 0%
+
+so when declaring flex: 1, this means flex: 1 1 0%
+
+flex-grow = 2 will enlarge the object 2times more than the others
+
+flex-shrink = 1 will shrink items evenly if the flex container is smaller
+flex-shrink = 0 will prevent items to shrink
+
+
+HOWEVER, in practice you will often keep flex: 1*/
+
+
+
+
+
+
+
+
+
+
+
